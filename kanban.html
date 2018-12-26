@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>MrAddon check browser</title>
+    </head>
+<script>
+
+    function checkBrowser() { 
+     if((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1 ) 
+    {
+        alert('Opera is not compatible. Only Chrome and Firefox are supported.');
+    }
+    else if(navigator.userAgent.indexOf("Chrome") != -1 )
+    {
+        //alert('Chrome');
+        window.location.href = "https://chrome.google.com/webstore/detail/jira-cloud-kanban-combine/hpmnhocaonfpflchaabcekbhbhijmchj?hl=en";
+    }
+    else if(navigator.userAgent.indexOf("Safari") != -1)
+    {
+        alert('Safari is not compatible. Only Chrome and Firefox are supported.');
+    }
+    else if(navigator.userAgent.indexOf("Firefox") != -1 ) 
+    {
+         //alert('Firefox');
+         window.location.href = "https://addons.mozilla.org/en-US/firefox/addon/jira-kanban-combined-wip-pro/";
+    }
+    else if((navigator.userAgent.indexOf("MSIE") != -1 ) || (!!document.documentMode == true )) //IF IE > 10
+    {
+      alert('IE is not compatible. Only Chrome and Firefox are supported.'); 
+    }  
+    else 
+    {
+       alert('unknown is not compatible. Only Chrome and Firefox are supported.');
+    }
+    }
+
+
+checkBrowser();
+</script>
+</html>
